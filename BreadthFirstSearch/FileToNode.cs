@@ -16,7 +16,7 @@ namespace BreadthFirstSearch
             _path = path;
         }
 
-        public Node[][] ReadFile()
+        public Node[,] ReadFile()
         {
             string[] contents = File.ReadAllLines(_path);
             string dimensionsLine = contents[0];
@@ -31,22 +31,28 @@ namespace BreadthFirstSearch
             int endX = int.Parse(endLine.Substring(0, endLine.IndexOf(" ")));
             int endY = int.Parse(endLine.Substring(endLine.IndexOf(" ")));
 
-            Node[][] nodeArr = new Node[heightOfMaze][];
+            var nodeArr = new Node[heightOfMaze, widthOfMaze];
             int lineCount = 3;
 
             for (int i = 0; i < heightOfMaze; ++i)
             {
-                string[] line = contents[3].Split(' ');
-                var n = new List<Node>();
-                foreach (var l in line)
-                {
-                    n.Add(new Node())
-                }
+                string[] line = contents[lineCount].Split(' ');
 
-                nodeArr[i];
+                for (int j = 0; j < widthOfMaze; ++j)
+                {
+                    var node = new Node(j, i);
+                    if(line[j] == "1")
+                    {
+                        node.IsValid = false;
+                    }
+                    nodeArr[i, j] = node;
+                }
+                lineCount++;
+
+
             }
 
-            return null;
+            return nodeArr;
         }
     }
 }
