@@ -1,0 +1,3 @@
+Files can be ran via ./BreadthFirstSearch.Test/SolveMaze_Test.  Not really a unit test but easier for testing and running while actively developing.
+
+Breadth first approach chosen as it was easier to understand and implement due ti my time constraints.  A* would have been ideal.
