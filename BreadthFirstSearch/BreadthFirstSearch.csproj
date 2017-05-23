@@ -44,12 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum.cs" />
-    <Compile Include="FileToNode.cs" />
+    <Compile Include="FileReader.cs" />
     <Compile Include="Grid.cs" />
+    <Compile Include="GridInfo.cs" />
+    <Compile Include="GridParser.cs" />
     <Compile Include="Node.cs" />
-    <Compile Include="Parser.cs" />
+    <Compile Include="PathFinder.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Program2.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
